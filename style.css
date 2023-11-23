@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e8ece8;
+}
+
+.calculadora{
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgb(0, 0, 0, 0.1),
+    -15px -15px 20px rgba(255, 255, 255, 0.918);
+}
+
+.calculadora .botoes{
+    position: relative;
+    display: grid;
+}
+
+.calculadora .botoes #valor{
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    text-align: end;
+    color: #6678dd;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 20px #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.calculadora .botoes span{
+    position: relative;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 20px #fff;
+    margin: 10px;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #292828;
+    border: 2px solid #d7dbd7;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px #fff;
+    border-radius: 10px;
+}
+
+.calculadora .botoes span:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 210px #fff;
+    color: #6678dd;
+}
+
+.calculadora .botoes span#limpar{
+    grid-column: span 2;
+    background: #9fa9e4;
+    color: #fff;
+    border: 2px solid #ece8e8;
+}
+
+.calculadora .botoes span#adicao{
+    grid-row: span 2;
+    background: #9fa9e4;
+    color: #fff;
+    border: 2px solid #ece8e8;
+}
+
+.calculadora .botoes span#igual{
+    grid-row: span 2;
+    background: #9fa9e4;
+    color: #fff;
+    border: 2px solid #ece8e8;
+}
+
+
+
+.calculadora .botoes span#limpar:active,
+.calculadora .botoes span#adicao:active,
+.calculadora .botoes span#igual:active{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 210px #fff,
+    inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
