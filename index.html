@@ -7,9 +7,10 @@
     <title>Calculadora</title>
 </head>
 <body>
+    <div class="togglebtn"></div>
     <div class="calculadora">
         <div class="botoes">
-            <h2 id="valor">123</h2>
+            <h2 id="valor"></h2>
             <span id="limpar">Limpar</span>
             <span>/</span>
             <span>*</span>
@@ -33,20 +34,32 @@
    
    <script>
         let botoes = document.querySelector('.botoes');
-        let btn = document.querySelectorAll('.span');
+        let btn = document.querySelectorAll('span');
         let valor = document.getElementById('valor');
+        let togglebtn = document.querySelector('.togglebtn');
+        let body = document.querySelector('body');
 
-        for(leti=0; i<btn.length;i++){
+
+
+        for(let i=0; i<btn.length; i++){
             btn[i].addEventListener("click", function(){
                 
                 if(this.innerHTML=="="){
                     valor.innerHTML = eval(valor.innerHTML);
                 }else{
                     if(this.innerHTML=="Limpar"){
-                        valor.innerHTML= "";
+                        valor.innerHTML = "";
+                    }
+                    else{
+                        valor.innerHTML += this.innerHTML;
                     }
                 }
             })
+        }
+
+        togglebtn.onclick = function(){
+            body.classList.toggle('dark');
+            
         }
     </script>
 
